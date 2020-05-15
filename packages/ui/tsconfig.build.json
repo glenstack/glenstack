@@ -1,0 +1,23 @@
+{
+  "include": [
+    "./src/*.ts",
+    "./src/*.tsx",
+    "./src/*.js",
+    "./src/*.jsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.jsx"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./src/**/*.stories.*",
+    "./src/**/*.test.*",
+    "./src/*.stories.*",
+    "./src/*.test.*"
+  ],
+  "extends": "expo-module-scripts/tsconfig.base",
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}

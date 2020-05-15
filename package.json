@@ -1,0 +1,40 @@
+{
+  "name": "glenstack",
+  "private": true,
+  "homepage": "https://glenstack.com/",
+  "bugs": {
+    "url": "https://github.com/glenstack/glenstack/issues",
+    "email": "hello@glenstack.com"
+  },
+  "contributors": [
+    {
+      "name": "Greg Brimble",
+      "email": "greg@glenstack.com",
+      "url": "https://glenstack.com/"
+    },
+    {
+      "name": "James O'Donnell",
+      "email": "james@glenstack.com",
+      "url": "https://glenstack.com/"
+    }
+  ],
+  "devDependencies": {
+    "husky": "4.2.5",
+    "lerna": "3.21.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:glenstack/glenstack.com"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "lint": "lerna run lint",
+    "test": "lerna run test:ci"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run test",
+      "pre-push": "lerna run test"
+    }
+  }
+}
