@@ -10,9 +10,15 @@
 
 1. `npm i`
 
+1. `npm start`
+
 ## Scripts
 
 Unless otherwise specified, these scripts are run across all packages.
+
+- `npm start`
+
+  Runs everything.
 
 - `npm run lint`
 

@@ -52,10 +52,9 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
     "lint": "prettier -c \"./src/**/*.{js,jsx,ts,tsx,json,md}\" \"./*.{js,jsx,ts,tsx,json,md}\"",
     "format": "npm run lint -- --write",
-    "start": "npm run develop",
+    "start": "gatsby develop --open",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "wrangler publish"
