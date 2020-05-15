@@ -1,9 +1,6 @@
 import {SafeAreaView, View, Text} from 'react-native';
 import tailwind from 'tailwind-rn';
-import Bio from "./bio";
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 
 const Tailwind = () => (
     <SafeAreaView style={tailwind('h-full')}>
