@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Layout = ({ location, title, children }) => {
+import "../css/index.css";
+import { Hero } from "./Hero";
+
+export const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
   if (location.pathname === rootPath) {
-    header = (
-      <h1>
-        <Link to={`/`}>{title}</Link>
-      </h1>
-    );
+    header = <Hero />;
   } else {
     header = (
       <h3>
@@ -30,5 +29,3 @@ const Layout = ({ location, title, children }) => {
     </div>
   );
 };
-
-export default Layout;

@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { PageProps, Link, graphql } from "gatsby";
 
-import Bio from "../components/bio";
-import Tailwind from "../components/tailwind";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { Text } from "react-native";
-import Switch from "expo-dark-mode-switch";
+import { Layout } from "../components/Layout";
+import { SEO } from "../components/SEO";
 
 type Data = {
   site: {
@@ -39,11 +35,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Tailwind />
-      <Text>Holy Moly, I'm rendered with React Native!</Text>
-      <Switch value={darkMode} onChange={(value) => setDarkMode(value)} />
       <SEO title="All posts" />
-      <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (

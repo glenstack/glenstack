@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import { Layout } from "../components/Layout";
+import { SEO } from "../components/SEO";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
@@ -22,9 +21,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <nav>
         <ul>
@@ -43,6 +39,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
+        136
       </nav>
     </Layout>
   );
