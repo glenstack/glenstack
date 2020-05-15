@@ -10,3 +10,26 @@
 
 1. `npm i`
 
+## Scripts
+
+Unless otherwise specified, these scripts are run across all packages.
+
+- `npm run lint`
+
+  Checks linting.
+
+- `npm run format`
+
+  Enforces linting.
+
+- `npm test`
+
+  Runs test suite.
+
+- `npm run build`
+
+  Builds artifacts.
+
+- `npm run deploy`
+
+  Deploys artifacts.
