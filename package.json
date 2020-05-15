@@ -32,6 +32,7 @@
     "format": "lerna run format",
     "lint:fix": "npm run lint || (npm run format && npm run lint)",
     "test": "lerna run test:ci",
+    "start": "lerna run --parallel start",
     "build": "lerna run build",
     "predeploy": "npm run build",
     "deploy": "lerna run deploy",
