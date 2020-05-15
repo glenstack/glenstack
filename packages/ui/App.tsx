@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { configure, getStorybookUI } from "@storybook/react-native";
 
-import "./.storybook/rn-addons";
+import "./rn-addons";
 
 configure(() => {
   require("./src/components/index.stories");
