@@ -1,11 +1,11 @@
 {
   "name": "glenstack.com",
   "private": true,
+  "homepage": "https://glenstack.com/",
   "description": "The landing site, glenstack.com",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/glenstack/glenstack/issues",
+    "email": "hello@glenstack.com"
   },
   "dependencies": {
     "@glenstack/ui": "^1.0.0",
@@ -38,17 +38,13 @@
     "react-native-web": "^0.11.7"
   },
   "devDependencies": {
+    "@cloudflare/wrangler": "1.9.0",
     "@types/react-native": "0.62.9",
     "babel-preset-expo": "8.1.0",
     "expo-cli": "^3.20.5",
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
@@ -56,9 +52,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "prettier -c \"./src/**/*.{js,jsx,ts,tsx,json,md}\" \"./*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "npm run lint -- --write",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "predeploy": "npm run build",
+    "deploy": "wrangler publish"
   }
 }

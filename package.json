@@ -29,12 +29,13 @@
   "scripts": {
     "postinstall": "lerna bootstrap",
     "lint": "lerna run lint",
+    "format": "lerna run format",
+    "lint:fix": "npm run lint || (npm run format && npm run lint)",
     "test": "lerna run test:ci"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
+      "pre-commit": "npm run lint:fix && npm test"
     }
   }
 }

@@ -17,6 +17,10 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+          node-version: "${{ steps.nvm.outputs.NVMRC }}"
       - name: Install
         run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
