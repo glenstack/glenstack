@@ -35,7 +35,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-gesture-handler": "https://github.com/software-mansion/react-native-gesture-handler.git#95bfb4df7ce9b1e222d50ead99eee7e27cd79043",
     "react-native-svg": "^12.1.0",
-    "react-native-web": "^0.11.7"
+    "react-native-web": "^0.11.7",
+    "tailwind-rn": "^1.0.2"
   },
   "devDependencies": {
     "@types/react-native": "0.62.9",

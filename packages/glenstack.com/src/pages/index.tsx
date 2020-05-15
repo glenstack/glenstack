@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { PageProps, Link, graphql } from "gatsby";
 
 import Bio from "../components/bio";
+import Tailwind from "../components/tailwind"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Text } from "react-native";
@@ -42,6 +43,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       <Switch value={darkMode} onChange={(value) => setDarkMode(value)} />
       <SEO title="All posts" />
       <Bio />
+      <Tailwind />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
