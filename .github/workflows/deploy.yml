@@ -24,3 +24,5 @@ jobs:
         run: npm run build
       - name: Deploy
         run: npm run deploy
+        env:
+          CF_API_TOKEN: "${{ secrets.CF_API_TOKEN }}"
