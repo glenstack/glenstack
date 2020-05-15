@@ -39,19 +39,17 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Tailwind />
       <Text>Holy Moly, I'm rendered with React Native!</Text>
       <Switch value={darkMode} onChange={(value) => setDarkMode(value)} />
       <SEO title="All posts" />
       <Bio />
-      <Tailwind />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3>
-                <Link to={node.fields.slug}>{title}</Link>
-              </h3>
+              <h3></h3>
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
