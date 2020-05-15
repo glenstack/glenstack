@@ -32,4 +32,8 @@ Unless otherwise specified, these scripts are run across all packages.
 
 - `npm run deploy`
 
-  Deploys artifacts.
+  Builds and deploys artifacts.
+
+- `npm run clean`
+
+  Purges artifacts.

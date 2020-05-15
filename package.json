@@ -34,7 +34,8 @@
     "test": "lerna run test:ci",
     "build": "lerna run build",
     "predeploy": "npm run build",
-    "deploy": "lerna run deploy"
+    "deploy": "lerna run deploy",
+    "clean": "lerna run clean"
   },
   "husky": {
     "hooks": {

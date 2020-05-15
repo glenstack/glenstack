@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "postinstall": "npm run build",
-    "build": "tsc --build tsconfig.build.json",
+    "build": "tsc --build tsconfig.build.json && npm run build-storybook",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -17,7 +17,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest --watch --coverage=false --changedSince=origin/master",
-    "test:ci": "jest"
+    "test:ci": "jest",
+    "clean": "rimraf ./.expo ./storybook-static",
+    "deploy": "wrangler publish"
   },
   "dependencies": {
     "expo": "37.0.10",
@@ -30,6 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
+    "@cloudflare/wrangler": "1.9.0",
     "@expo/webpack-config": "0.12.6",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-links": "5.3.18",
@@ -48,6 +51,7 @@
     "jest": "26.0.1",
     "react-native-testing-library": "1.13.2",
     "react-test-renderer": "16.13.1",
+    "rimraf": "3.0.2",
     "typescript": "3.9.2"
   }
 }

@@ -58,7 +58,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "predeploy": "npm run build",
     "deploy": "wrangler publish"
   }
 }
