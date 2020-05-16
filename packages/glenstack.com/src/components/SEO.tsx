@@ -20,6 +20,7 @@ export const SEO = ({ description, lang, meta, title }) => {
             title
             description
             keywords
+            siteUrl
             social {
               href
             }

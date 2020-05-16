@@ -7,7 +7,7 @@
     "./dist/"
   ],
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "npm run build:lib",
     "build": "npm run build:lib && npm run build:storybook",
     "build:lib": "tsc --build tsconfig.build.json",
     "build:storybook": "build-storybook",
