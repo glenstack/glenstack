@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Transition from "./lib/Transition";
+import { Link } from "gatsby";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
@@ -50,24 +51,30 @@ export const Header = () => {
             >
               Pricing
             </a>
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
             >
               About
-            </a>
-            <a
-              href="/careers"
+            </Link>
+            <Link
+              to="/contact"
+              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/careers"
               className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
             >
               Careers
-            </a>
-            <a
-              href="/blog"
+            </Link>
+            <Link
+              to="/blog"
               className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
             >
               Blog
-            </a>
+            </Link>
           </nav>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <span className="inline-flex rounded-md shadow-sm">
@@ -233,54 +240,54 @@ export const Header = () => {
               </div>
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 row-gap-4 col-gap-8">
-                  <a
-                    href="/"
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Pricing
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Docs
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Enterprise
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Blog
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Help Center
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Guides
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Security
-                  </a>
-                  <a
-                    href="/"
+                  </Link>
+                  <Link
+                    to="/"
                     className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
                   >
                     Events
-                  </a>
+                  </Link>
                 </div>
                 <div className="space-y-6">
                   <span className="w-full flex rounded-md shadow-sm">

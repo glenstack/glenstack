@@ -52,12 +52,14 @@ export const Footer = () => (
                   </Link>
                 </li>
                 <li className="mt-4">
-                  <Link
-                    to="/status"
+                  <a
+                    href="https://status.glenstack.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Status
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -69,28 +71,28 @@ export const Footer = () => (
               </h4>
               <ul className="mt-4">
                 <li>
-                  <a
-                    href="/about"
+                  <Link
+                    to="/about"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/careers"
+                  <Link
+                    to="/careers"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Careers
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/blog"
+                  <Link
+                    to="/blog"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Blog
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -100,20 +102,20 @@ export const Footer = () => (
               </h4>
               <ul className="mt-4">
                 <li className="">
-                  <a
-                    href="/"
+                  <Link
+                    to="/privacy"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Privacy
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/"
+                  <Link
+                    to="/terms"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Terms
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
