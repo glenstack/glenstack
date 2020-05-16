@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Transition from "./lib/Transition";
 
 export const Hero = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className="relative bg-gray-50 overflow-hidden">
@@ -73,10 +77,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div
-          data-todo-x-data="{ open: false }"
-          className="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32"
-        >
+        <div className="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
             <nav className="relative flex items-center justify-between sm:h-10 md:justify-center">
               <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -90,7 +91,7 @@ export const Hero = () => {
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
                     <button
-                      data-todo-at-click="open = true"
+                      onClick={() => setOpen(!open)}
                       type="button"
                       className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                     >
@@ -161,86 +162,86 @@ export const Hero = () => {
             data-todo-x-transition-leave-start="opacity-100 scale-100"
             data-todo-x-transition-leave-end="opacity-0 scale-95"
           >
-            <div className="rounded-lg shadow-md">
-              <div className="rounded-lg bg-white shadow-xs overflow-hidden">
-                <div className="px-5 pt-4 flex items-center justify-between">
-                  <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="-mr-2">
-                    <button
-                      data-todo-at-click="open = false"
-                      type="button"
-                      className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                    >
-                      <svg
-                        className="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
+            <Transition>
+              <div className="rounded-lg shadow-md">
+                <div className="rounded-lg bg-white shadow-xs overflow-hidden">
+                  <div className="px-5 pt-4 flex items-center justify-between">
+                    <div>
+                      <img
+                        className="h-8 w-auto"
+                        src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div className="-mr-2">
+                      <button
+                        data-todo-at-click="open = false"
+                        type="button"
+                        className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
+                        <svg
+                          className="h-6 w-6"
+                          stroke="currentColor"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div className="px-2 pt-2 pb-3">
-                  <a
-                    href="/"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Product
-                  </a>
-                  <a
-                    href="/"
-                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Features
-                  </a>
-                  <a
-                    href="/"
-                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Marketplace
-                  </a>
-                  <a
-                    href="/"
-                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  >
-                    Company
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="/"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
-                  >
-                    Log in
-                  </a>
+                  <div className="px-2 pt-2 pb-3">
+                    <a
+                      href="/"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    >
+                      Product
+                    </a>
+                    <a
+                      href="/"
+                      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    >
+                      Features
+                    </a>
+                    <a
+                      href="/"
+                      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    >
+                      Marketplace
+                    </a>
+                    <a
+                      href="/"
+                      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    >
+                      Company
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="/"
+                      className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
+                    >
+                      Log in
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Transition>
           </div>
 
           <div className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
             <div className="text-center">
               <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                Data to enrich your <br className="xl:hidden" />
-                <span className="text-indigo-600">online business</span>
+                A whole new outlook on <br className="xl:hidden" />
+                <span className="text-indigo-600">application development</span>
               </h2>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                Glenstack can
               </p>
               <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                 <div className="rounded-md shadow">

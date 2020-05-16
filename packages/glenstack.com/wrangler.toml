@@ -1,7 +1,6 @@
 name = "glenstack-com"
 type = "webpack"
-account_id = "5a883b414d4090a1442b20361f3c43a9"
-# account_id = "41d154df19739a540756d193a9715370"
+account_id = "41d154df19739a540756d193a9715370"
 workers_dev = true
 # route = "glenstack.com/*"
 # zone_id = "1a50aad2a97cd8ee713df553f2214779"

@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import "../css/index.css";
 import { Hero } from "./Hero";
+import { Footer } from "./Footer";
 
 export const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
@@ -21,11 +22,7 @@ export const Layout = ({ location, title, children }) => {
     <div>
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </div>
   );
 };
