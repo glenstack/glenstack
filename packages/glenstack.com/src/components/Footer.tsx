@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 export const Footer = () => (
   <footer className="bg-white">
@@ -13,7 +14,7 @@ export const Footer = () => (
               <ul className="mt-4">
                 <li>
                   <a
-                    href="/"
+                    href="/#solutions"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Mobile
@@ -21,7 +22,7 @@ export const Footer = () => (
                 </li>
                 <li className="mt-4">
                   <a
-                    href="/"
+                    href="/#solutions"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Web
@@ -29,7 +30,7 @@ export const Footer = () => (
                 </li>
                 <li className="mt-4">
                   <a
-                    href="/"
+                    href="/#other"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Other
@@ -43,28 +44,20 @@ export const Footer = () => (
               </h4>
               <ul className="mt-4">
                 <li>
-                  <a
-                    href="/"
+                  <Link
+                    to="/pricing"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/"
-                    className="text-base leading-6 text-gray-500 hover:text-gray-900"
-                  >
-                    Documentation
-                  </a>
-                </li>
-                <li className="mt-4">
-                  <a
-                    href="/"
+                  <Link
+                    to="/status"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Status
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -77,7 +70,7 @@ export const Footer = () => (
               <ul className="mt-4">
                 <li>
                   <a
-                    href="/"
+                    href="/about"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     About
@@ -85,7 +78,15 @@ export const Footer = () => (
                 </li>
                 <li className="mt-4">
                   <a
-                    href="/"
+                    href="/careers"
+                    className="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Careers
+                  </a>
+                </li>
+                <li className="mt-4">
+                  <a
+                    href="/blog"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Blog

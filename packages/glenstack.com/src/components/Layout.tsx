@@ -4,25 +4,22 @@ import { Link } from "gatsby";
 import "../css/index.css";
 import { Hero } from "./Hero";
 import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
+  const rootPath = `${__PATH_PREFIX__ as any}/`;
   let header;
 
   if (location.pathname === rootPath) {
     header = <Hero />;
   } else {
-    header = (
-      <h3>
-        <Link to={`/`}>{title}</Link>
-      </h3>
-    );
+    header = <Header />;
   }
   return (
-    <div>
+    <>
       <header>{header}</header>
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };

@@ -1,10 +1,19 @@
-import React from "react";
-
+import React, { FC, createContext, useRef, useEffect, useContext } from "react";
 import { CSSTransition as ReactCSSTransition } from "react-transition-group";
-import { createContext, useRef, useEffect, useContext } from "react";
 
-const TransitionContext = createContext({
-  parent: {},
+type TransitionContextProps = {
+  parent: {
+    show: boolean;
+    isInitialRender: boolean;
+    appear?: boolean;
+  };
+};
+
+const TransitionContext = createContext<Partial<TransitionContextProps>>({
+  parent: {
+    show: false,
+    isInitialRender: true,
+  },
 });
 
 const useIsInitialRender = () => {
@@ -15,7 +24,20 @@ const useIsInitialRender = () => {
   return isInitialRender.current;
 };
 
-const CSSTransition = ({
+type TransitionProps = {
+  show: boolean;
+  enter?: string;
+  enterFrom?: string;
+  enterTo?: string;
+  leave?: string;
+  leaveFrom?: string;
+  leaveTo?: string;
+  appear?: boolean;
+};
+
+type CSSTransitionProps = TransitionProps;
+
+const CSSTransition: FC<CSSTransitionProps> = ({
   show,
   enter = "",
   enterFrom = "",
@@ -75,7 +97,7 @@ const CSSTransition = ({
   );
 };
 
-function Transition({ show, appear, ...rest }) {
+const Transition: FC<TransitionProps> = ({ show, appear, ...rest }) => {
   const { parent } = useContext(TransitionContext);
   const isInitialRender = useIsInitialRender();
   const isChild = show === undefined;
@@ -83,8 +105,8 @@ function Transition({ show, appear, ...rest }) {
   if (isChild) {
     return (
       <CSSTransition
-        appear={parent.appear || !parent.isInitialRender}
-        show={parent.show}
+        appear={parent ? parent.appear || !parent.isInitialRender : false}
+        show={parent?.show ? parent.show : false}
         {...rest}
       />
     );
@@ -103,6 +125,6 @@ function Transition({ show, appear, ...rest }) {
       <CSSTransition appear={appear} show={show} {...rest} />
     </TransitionContext.Provider>
   );
-}
+};
 
 export default Transition;
