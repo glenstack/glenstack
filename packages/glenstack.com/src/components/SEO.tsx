@@ -15,7 +15,7 @@ export const SEO = ({ description, lang, meta, title }) => {
     graphql`
       query {
         site {
-          buildTime
+          buildTime(formatString: "YYYY-MM-DD")
           siteMetadata {
             title
             description
