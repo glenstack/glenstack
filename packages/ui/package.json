@@ -21,13 +21,16 @@
     "deploy": "wrangler publish"
   },
   "dependencies": {
+    "@expo/html-elements": "0.0.0-alpha.5",
     "expo": "37.0.10",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
-    "react-native-web": "0.12.2"
+    "react-native-web": "0.12.2",
+    "react-native-web-hooks": "3.0.1",
+    "react-responsive": "8.0.3"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -39,9 +42,11 @@
     "@storybook/addons": "5.3.18",
     "@storybook/react": "5.3.18",
     "@storybook/react-native": "5.3.18",
+    "@tailwindcss/ui": "^0.3.0",
     "@types/jest": "25.2.2",
     "@types/react": "16.9.35",
     "@types/react-native": "0.62.8",
+    "@types/react-responsive": "8.0.2",
     "@types/react-test-renderer": "16.9.2",
     "babel-loader": "8.1.0",
     "babel-preset-expo": "8.1.0",
@@ -52,6 +57,7 @@
     "react-native-testing-library": "1.13.2",
     "react-test-renderer": "16.13.1",
     "rimraf": "3.0.2",
+    "tailwindcss": "^1.4.6",
     "typescript": "3.9.2"
   }
 }
