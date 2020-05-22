@@ -84,11 +84,23 @@ export const Hero = () => {
               <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                 <div className="flex items-center justify-between w-full md:w-auto">
                   <Link to="/">
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                      alt=""
-                    />
+                  <div class="flex mb-4">
+                    <div class="w-1/4 h-12">
+                      <img
+                        className="h-20 w-auto sm:h-20"
+                        src="/GlenstackLogoSimple.svg"
+                        alt="hi"
+                      />
+                    </div>
+                    <div class="w-3/4  h-12 mt-6 ml-4">
+                      <a
+                        href="#"
+                        className="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-2xl"
+                      >
+                        Glenstack
+                      </a>
+                    </div>
+                  </div>
                   </Link>
                   <div className="-mr-2 flex items-center md:hidden">
                     <button
@@ -152,16 +164,16 @@ export const Hero = () => {
                 </Link>
               </div>
               <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                <span className="inline-flex rounded-md shadow">
+                {/* <span className="inline-flex rounded-md shadow">
                   <a
                     href="https://glenstack.dev/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:shadow-outline-blue active:bg-gray-50 active:text-indigo-700 transition duration-150 ease-in-out"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-glenstackprimary bg-black hover:text-indigo-500 focus:outline-none focus:shadow-outline-blue active:bg-gray-50 active:text-indigo-700 transition duration-150 ease-in-out"
                   >
                     Login
                   </a>
-                </span>
+                </span> */}
               </div>
             </nav>
           </div>
@@ -265,29 +277,19 @@ export const Hero = () => {
           <div className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
             <div className="text-center">
               <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                A whole new approach to <br className="xl:hidden" />
-                <span className="text-indigo-600">applications</span>
+              We'll build your application for Web, Android and iOS. <br className="xl:hidden" />
+                <span className="text-glenstackprimary">Fast.</span>
               </h2>
-              <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Glenstack can work with you to realize your idea. Glenstack can
-                work with you to realize your idea. Glenstack can work with you
-                to realize your idea.
+              <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-15 md:text-xl md:max-w-3xl">
+                Find out how we can help you.
               </p>
               <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                 <div className="rounded-md shadow">
                   <Link
                     to="/contact"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-glenstackprimary hover:bg-glenstackhighlight focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                   >
                     Contact Us
-                  </Link>
-                </div>
-                <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                  <Link
-                    to="/"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:shadow-outline-blue transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                  >
-                    Do something else
                   </Link>
                 </div>
               </div>

@@ -22,77 +22,33 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         <div className="py-16 overflow-hidden lg:py-24">
           <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
             <div>
-              <svg
-                className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-                width="404"
-                height="784"
-                fill="none"
-                viewBox="0 0 404 784"
-              >
-                <defs>
-                  <pattern
-                    id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-                    x="0"
-                    y="0"
-                    width="60"
-                    height="60"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <g fill="none" fill-rule="evenodd">
-                      <g fill="#9C92AC" fill-opacity="0.4">
-                        <path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z" />
-                      </g>
-                    </g>
-                  </pattern>
-                </defs>
-                <rect
-                  width="404"
-                  height="784"
-                  fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-                />
-                {/* <defs>
-                  <pattern
-                    id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b"
-                    x="0"
-                    y="0"
-                    width="20"
-                    height="20"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x="0"
-                      y="0"
-                      width="4"
-                      height="4"
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
-                  </pattern>
-                </defs>
-                <rect
-                  width="404"
-                  height="784"
-                  fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
-                /> */}
-              </svg>
-
+              <img
+                className="hidden lg:block absolute left-full transform -translate-x-3/5 -translate-y-2/5 opacity-50"
+                width="800"
+                src="GlenstackHeroSide.svg"
+              />
+              <img
+                className="hidden lg:block absolute left-3/4 transform -translate-x-5/6 mr-16"
+                width="300"
+                src="mobileexample.png"
+              />
               <div className="relative lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
                 <div className="relative">
                   <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
-                    Beautiful, native mobile applications
+                    Beautiful web apps and native mobile applications
                   </h4>
                   <p className="mt-3 text-lg leading-7 text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur minima sequi recusandae, porro maiores officia
-                    assumenda aliquam laborum ab aliquid veritatis impedit odit
-                    adipisci optio iste blanditiis facere. Totam, velit.
+                    Powered by React Native, we only write code once.
+                    This means that we can build your application 
+                    and have it running on web, android and ios in 
+                    a fraction of the time it takes the competition.
                   </p>
 
                   <ul className="mt-10">
                     <li>
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                             <svg
                               className="h-6 w-6"
                               stroke="currentColor"
@@ -110,12 +66,11 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                         </div>
                         <div className="ml-4">
                           <h5 className="text-lg leading-6 font-medium text-gray-900">
-                            Competitive exchange rates
+                            Mobile first
                           </h5>
                           <p className="mt-2 text-base leading-6 text-gray-500">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Maiores impedit perferendis suscipit eaque,
-                            iste dolor cupiditate blanditiis ratione.
+                            The future is mobile. We build solutions with a mobile first mindset so
+                            your application will look beautiful and run smoothly for your customers on any device.
                           </p>
                         </div>
                       </div>
@@ -123,7 +78,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                     <li className="mt-10">
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                             <svg
                               className="h-6 w-6"
                               stroke="currentColor"
@@ -141,12 +96,11 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                         </div>
                         <div className="ml-4">
                           <h5 className="text-lg leading-6 font-medium text-gray-900">
-                            No hidden fees
+                            Beautiful design
                           </h5>
                           <p className="mt-2 text-base leading-6 text-gray-500">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Maiores impedit perferendis suscipit eaque,
-                            iste dolor cupiditate blanditiis ratione.
+                            We know how important intelligent and charming design is to you and your customers. We've built
+                            a powerful library of gorgeous visual components to speed the creation of your site. We'll then handcraft them into solutions that work for you.
                           </p>
                         </div>
                       </div>
@@ -154,7 +108,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                     <li className="mt-10">
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                             <svg
                               className="h-6 w-6"
                               stroke="currentColor"
@@ -172,12 +126,10 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                         </div>
                         <div className="ml-4">
                           <h5 className="text-lg leading-6 font-medium text-gray-900">
-                            Transfers are instant
+                            Cost?
                           </h5>
                           <p className="mt-2 text-base leading-6 text-gray-500">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Maiores impedit perferendis suscipit eaque,
-                            iste dolor cupiditate blanditiis ratione.
+                            ...
                           </p>
                         </div>
                       </div>
@@ -218,67 +170,40 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                       fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                     />
                   </svg>
-                  <img
+                  {/* <img
                     className="relative mx-auto"
                     width="490"
-                    src="https://tailwindui.com/img/features/feature-example-1.png"
+                    src="/exampleSite.png"
                     alt=""
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
 
             <div>
-              <svg
-                className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
-                width="404"
-                height="784"
-                fill="none"
-                viewBox="0 0 404 784"
+              <img
+                className="hidden lg:block absolute right-full transform translate-x-1/2 -translate-y-1/5 opacity-50"
+                height="700"
+                width="700"
+                src="GlenstackHeroSide2.svg"
               >
-                <defs>
-                  <pattern
-                    id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-                    x="0"
-                    y="0"
-                    width="20"
-                    height="20"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x="0"
-                      y="0"
-                      width="4"
-                      height="4"
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
-                  </pattern>
-                </defs>
-                <rect
-                  width="404"
-                  height="784"
-                  fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
-                />
-              </svg>
+              </img>
 
               <div className="relative mt-12 sm:mt-16 lg:mt-24">
                 <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                   <div className="lg:col-start-2">
                     <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
-                      Responsive web design
+                      Integrated services
                     </h4>
                     <p className="mt-3 text-lg leading-7 text-gray-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Impedit ex obcaecati natus eligendi delectus, cum deleniti
-                      sunt in labore nihil quod quibusdam expedita nemo.
+                      We have standardised services, which can be customised for your needs and hosted by us.
                     </p>
 
                     <ul className="mt-10">
                       <li>
                         <div className="flex">
                           <div className="flex-shrink-0">
-                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                               <svg
                                 className="h-6 w-6"
                                 stroke="currentColor"
@@ -310,7 +235,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                       <li className="mt-10">
                         <div className="flex">
                           <div className="flex-shrink-0">
-                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                               <svg
                                 className="h-6 w-6"
                                 stroke="currentColor"
@@ -398,7 +323,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
               </div>
               <div className="mt-10 sm:grid sm:grid-cols-2 sm:col-gap-8 sm:row-gap-10 lg:col-span-2 lg:mt-0">
                 <div>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
@@ -424,7 +349,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   </div>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
@@ -450,7 +375,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   </div>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
@@ -477,7 +402,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   </div>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
