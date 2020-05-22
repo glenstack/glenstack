@@ -1,0 +1,12 @@
+{
+  "name": "worker",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "0.0.10",
+    "btoa": "1.2.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "1.0.9"
+  }
+}
