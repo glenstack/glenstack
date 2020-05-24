@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import "../css/index.css";
 import { Hero } from "./Hero";
@@ -7,10 +6,9 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 export const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__ as any}/`;
   let header;
 
-  if (location.pathname === rootPath) {
+  if (location.pathname === "/") {
     header = <Hero />;
   } else {
     header = <Header />;
@@ -19,7 +17,11 @@ export const Layout = ({ location, title, children }) => {
     <>
       <header>{header}</header>
       <main>{children}</main>
-      <Footer />
+      <Footer location={location} />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      />
     </>
   );
 };
