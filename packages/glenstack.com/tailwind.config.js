@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   purge: [
     "./src/**/*.html",
@@ -9,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "outline-glenstack": `0 0 0 3px rgba(170, 218, 103, 0.45)`,
+      },
       colors: {
         glenstack: {
           "50": "#f3f9eb",
@@ -23,6 +28,9 @@ module.exports = {
           "900": "#305502",
         },
         glenstackhighlight: "#7afdd6",
+      },
+      fontFamily: {
+        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -18,7 +18,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Homepage" />
-      <div id="solutions" className="bg-gray-50">
+      <div className="bg-gray-50">
         <div className="py-16 overflow-hidden lg:py-24">
           <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
             <div>
@@ -318,7 +318,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           </div>
         </div>
 
-        <div id="other" className="overflow-hidden">
+        <div className="overflow-hidden">
           <div className="relative max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div className="relative lg:grid lg:grid-cols-3 lg:col-gap-8">
               <div className="lg:col-span-1">

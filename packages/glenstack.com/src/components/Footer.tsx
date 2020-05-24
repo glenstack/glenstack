@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export const Footer = () => (
+export const Footer = ({ location }) => (
   <footer className="bg-white">
     <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -13,28 +13,28 @@ export const Footer = () => (
               </h4>
               <ul className="mt-4">
                 <li>
-                  <a
-                    href="/#solutions"
+                  <Link
+                    to="/solutions"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Mobile
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/#solutions"
+                  <Link
+                    to="/solutions"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Web
-                  </a>
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  <a
-                    href="/#other"
+                  <Link
+                    to="/integrations"
                     className="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
-                    Other
-                  </a>
+                    Integrations
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -133,11 +133,11 @@ export const Footer = () => (
               aria-label="Email address"
               type="email"
               required
-              className="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-300 focus:shadow-outline transition duration-150 ease-in-out"
+              className="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-glenstack-300 focus:shadow-outline-glenstack transition duration-150 ease-in-out"
               placeholder="Enter your email"
             />
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-              <button className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-glenstack-600 hover:bg-glenstack-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+              <button className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-glenstack-600 hover:bg-glenstack-500 focus:outline-none focus:shadow-outline-glenstack transition duration-150 ease-in-out">
                 Subscribe
               </button>
             </div>
