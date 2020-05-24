@@ -10,13 +10,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'glenstackprimary': '#86c232',
-        'glenstacksecondary': '#72a330',
-        'glenstacktertiary': '#618a30',
-        'glenstackbase': '#3a4a26',
-        'glenstackhighlight': '#7afdd6',
-      }
-    }
+        glenstack: {
+          "50": "#f3f9eb",
+          "100": "#e6f4d2",
+          "200": "#c3e298",
+          "300": "#aada67",
+          "400": "#86c232",
+          "500": "#72a330",
+          "600": "#527b18",
+          "700": "#3f690c",
+          "800": "#375e08",
+          "900": "#305502",
+        },
+        glenstackhighlight: "#7afdd6",
+      },
+    },
   },
   plugins: [require("@tailwindcss/ui")],
 };

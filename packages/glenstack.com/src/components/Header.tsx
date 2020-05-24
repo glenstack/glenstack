@@ -80,7 +80,7 @@ export const Header = () => {
             <span className="inline-flex rounded-md shadow-sm">
               <a
                 href="/"
-                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-glenstack-600 hover:bg-glenstack-500 focus:outline-none focus:border-glenstack-700 focus:shadow-outline-glenstack active:bg-glenstack-700 transition ease-in-out duration-150"
               >
                 Login
               </a>
@@ -139,7 +139,7 @@ export const Header = () => {
                       className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        className="flex-shrink-0 h-6 w-6 text-glenstack-600"
                         stroke="currentColor"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -160,7 +160,7 @@ export const Header = () => {
                       className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        className="flex-shrink-0 h-6 w-6 text-glenstack-600"
                         stroke="currentColor"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -181,7 +181,7 @@ export const Header = () => {
                       className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        className="flex-shrink-0 h-6 w-6 text-glenstack-600"
                         fill="none"
                         stroke="currentColor"
                         strokeLinecap="round"
@@ -200,7 +200,7 @@ export const Header = () => {
                       className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        className="flex-shrink-0 h-6 w-6 text-glenstack-600"
                         stroke="currentColor"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -221,7 +221,7 @@ export const Header = () => {
                       className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                        className="flex-shrink-0 h-6 w-6 text-glenstack-600"
                         fill="none"
                         stroke="currentColor"
                         strokeLinecap="round"
@@ -293,7 +293,7 @@ export const Header = () => {
                   <span className="w-full flex rounded-md shadow-sm">
                     <a
                       href="/"
-                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-glenstack-600 hover:bg-glenstack-500 focus:outline-none focus:border-glenstack-700 focus:shadow-outline-glenstack active:bg-glenstack-700 transition ease-in-out duration-150"
                     >
                       Sign up
                     </a>
@@ -302,7 +302,7 @@ export const Header = () => {
                     Existing customer?
                     <a
                       href="/"
-                      className="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                      className="text-glenstack-600 hover:text-glenstack-500 transition ease-in-out duration-150"
                     >
                       Sign in
                     </a>

@@ -38,17 +38,17 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                     Beautiful web apps and native mobile applications
                   </h4>
                   <p className="mt-3 text-lg leading-7 text-gray-500">
-                    Powered by React Native, we only write code once.
-                    This means that we can build your application 
-                    and have it running on web, android and ios in 
-                    a fraction of the time it takes the competition.
+                    Powered by React Native, we only write code once. This means
+                    that we can build your application and have it running on
+                    web, android and ios in a fraction of the time it takes the
+                    competition.
                   </p>
 
                   <ul className="mt-10">
                     <li>
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                             <svg
                               className="h-6 w-6"
                               stroke="currentColor"
@@ -69,8 +69,10 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                             Mobile first
                           </h5>
                           <p className="mt-2 text-base leading-6 text-gray-500">
-                            The future is mobile. We build solutions with a mobile first mindset so
-                            your application will look beautiful and run smoothly for your customers on any device.
+                            The future is mobile. We build solutions with a
+                            mobile first mindset so your application will look
+                            beautiful and run smoothly for your customers on any
+                            device.
                           </p>
                         </div>
                       </div>
@@ -78,7 +80,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                     <li className="mt-10">
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                             <svg
                               className="h-6 w-6"
                               stroke="currentColor"
@@ -99,8 +101,11 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                             Beautiful design
                           </h5>
                           <p className="mt-2 text-base leading-6 text-gray-500">
-                            We know how important intelligent and charming design is to you and your customers. We've built
-                            a powerful library of gorgeous visual components to speed the creation of your site. We'll then handcraft them into solutions that work for you.
+                            We know how important intelligent and charming
+                            design is to you and your customers. We've built a
+                            powerful library of gorgeous visual components to
+                            speed the creation of your site. We'll then
+                            handcraft them into solutions that work for you.
                           </p>
                         </div>
                       </div>
@@ -108,7 +113,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                     <li className="mt-10">
                       <div className="flex">
                         <div className="flex-shrink-0">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                          <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                             <svg
                               className="h-6 w-6"
                               stroke="currentColor"
@@ -186,8 +191,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                 height="700"
                 width="700"
                 src="GlenstackHeroSide2.svg"
-              >
-              </img>
+              ></img>
 
               <div className="relative mt-12 sm:mt-16 lg:mt-24">
                 <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
@@ -196,14 +200,15 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                       Integrated services
                     </h4>
                     <p className="mt-3 text-lg leading-7 text-gray-500">
-                      We have standardised services, which can be customised for your needs and hosted by us.
+                      We have standardised services, which can be customised for
+                      your needs and hosted by us.
                     </p>
 
                     <ul className="mt-10">
                       <li>
                         <div className="flex">
                           <div className="flex-shrink-0">
-                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                               <svg
                                 className="h-6 w-6"
                                 stroke="currentColor"
@@ -235,7 +240,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                       <li className="mt-10">
                         <div className="flex">
                           <div className="flex-shrink-0">
-                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                               <svg
                                 className="h-6 w-6"
                                 stroke="currentColor"
@@ -323,7 +328,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
               </div>
               <div className="mt-10 sm:grid sm:grid-cols-2 sm:col-gap-8 sm:row-gap-10 lg:col-span-2 lg:mt-0">
                 <div>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
@@ -349,7 +354,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   </div>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
@@ -375,7 +380,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   </div>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
@@ -402,7 +407,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   </div>
                 </div>
                 <div className="mt-10 sm:mt-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstackprimary text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-glenstack-500 text-white">
                     <svg
                       className="h-6 w-6"
                       stroke="currentColor"
