@@ -11,6 +11,7 @@ const SolutionsPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Solutions" />
       <h1>Solutions</h1>
+      <div>- Mobile - Web - Other - Link to Integrations - Ongoing Support</div>
     </Layout>
   );
 };
