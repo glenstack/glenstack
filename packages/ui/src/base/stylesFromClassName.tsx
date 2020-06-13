@@ -8,14 +8,14 @@ export const stylesFromClassName = (
 ): {} => {
   const classes = className.split(" ");
 
-  const isBigScreen = useMediaQuery({ query: "(min-device-width: 1824px)" });
+  // const isBigScreen = useMediaQuery({ query: "(min-device-width: 1824px)" });
 
-  const isHover = useHover(ref);
-  const isFocus = useFocus(ref);
-  const isActive = useActive(ref);
+  // const isHover = useHover(ref);
+  // const isFocus = useFocus(ref);
+  // const isActive = useActive(ref);
 
   return {
-    backgroundColor: isBigScreen ? (isHover ? "pink" : "purple") : "blue",
+    // backgroundColor: isBigScreen ? (isHover ? "pink" : "purple") : "blue",
     fontSize: 72,
   };
 };

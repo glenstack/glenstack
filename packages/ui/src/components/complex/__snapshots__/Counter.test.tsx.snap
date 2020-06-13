@@ -8,10 +8,9 @@ exports[`Counter matches snapshot 1`] = `
   </Text>
   <View
     accessibilityRole="button"
-    accessibilityStates={Array []}
+    accessibilityState={Object {}}
     accessible={true}
     focusable={true}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -38,7 +37,7 @@ exports[`Counter matches snapshot 1`] = `
             Object {
               "color": "#007AFF",
               "fontSize": 18,
-              "padding": 8,
+              "margin": 8,
               "textAlign": "center",
             },
           ]
@@ -50,10 +49,9 @@ exports[`Counter matches snapshot 1`] = `
   </View>
   <View
     accessibilityRole="button"
-    accessibilityStates={Array []}
+    accessibilityState={Object {}}
     accessible={true}
     focusable={true}
-    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -80,7 +78,7 @@ exports[`Counter matches snapshot 1`] = `
             Object {
               "color": "#007AFF",
               "fontSize": 18,
-              "padding": 8,
+              "margin": 8,
               "textAlign": "center",
             },
           ]

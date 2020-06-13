@@ -20,7 +20,7 @@
   ],
   "devDependencies": {
     "husky": "4.2.5",
-    "lerna": "3.21.0"
+    "lerna": "3.22.1"
   },
   "repository": {
     "type": "git",
