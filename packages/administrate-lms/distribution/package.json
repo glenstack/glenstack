@@ -1,0 +1,12 @@
+{
+  "name": "distribution",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/wrangler": "1.10.3"
+  }
+}

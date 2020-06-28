@@ -1,0 +1,9 @@
+name = "administrate-lms"
+type = "webpack"
+account_id = "41d154df19739a540756d193a9715370"
+workers_dev = true
+# route = "administrate-lms.glenstack.dev/*"
+# zone_id = "b871929efc74ff6123beaff3a5f55841"
+
+[site]
+bucket = "../dist"

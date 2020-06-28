@@ -3,6 +3,8 @@ import { View } from "react-native";
 import { WebView } from "react-native-webview";
 import * as FileSystem from "expo-file-system";
 import * as Sharing from "expo-sharing";
+import * as Linking from "expo-linking";
+import registerRootComponent from "expo/build/launch/registerRootComponent";
 
 export default function App() {
   const interceptor = (...args: any[]) => {
@@ -65,3 +67,5 @@ export default function App() {
     </View>
   );
 }
+
+registerRootComponent(App);
