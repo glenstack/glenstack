@@ -1,0 +1,14 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cross-fetch": "3.0.5",
+    "express": "4.17.1",
+    "graphql-voyager": "1.0.0-rc.31",
+    "openurl": "1.1.1"
+  }
+}
