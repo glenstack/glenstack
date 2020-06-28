@@ -1,4 +1,5 @@
 {
+  "name": "administrate-lms",
   "main": "./src/App",
   "scripts": {
     "postinstall": "cd distrubution && npm run install",
@@ -7,6 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
+    "predeploy": "expo export --public-url https://administrate-lms.glenstack.workers.dev/",
     "deploy": "cd distribution && npm run deploy"
   },
   "dependencies": {
