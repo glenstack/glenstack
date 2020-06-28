@@ -1,4 +1,5 @@
 import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
+import { handleEvent as server } from "../src";
 
 const handleError = (error) => {
   console.error(error);
@@ -13,10 +14,15 @@ addEventListener("fetch", (event) => {
 });
 
 async function handleEvent(event) {
-  let options = {};
+  try {
+    const serverResponse = await server(event);
+    if (serverResponse.status !== 404) return serverResponse;
+  } catch (error) {
+    handleError(error);
+  }
 
   try {
-    const page = await getAssetFromKV(event, options);
+    const page = await getAssetFromKV(event);
 
     const response = new Response(page.body, page);
 

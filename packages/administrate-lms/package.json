@@ -2,13 +2,15 @@
   "name": "administrate-lms",
   "main": "./src/App",
   "scripts": {
-    "postinstall": "cd distrubution && npm run install",
+    "postinstall": "cd distribution && npm install",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "predeploy": "expo export --public-url https://administrate-lms.glenstack.workers.dev/",
+    "preexport": "rimraf ./dist",
+    "export": "expo export --public-url https://administrate-lms.glenstack.workers.dev/",
+    "predeploy": "npm run export",
     "deploy": "cd distribution && npm run deploy"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
     "@types/react": "16.9.41",
     "@types/react-native": "0.62.14",
     "expo-cli": "3.21.13",
+    "rimraf": "3.0.2",
     "typescript": "3.9.5"
   },
   "private": true

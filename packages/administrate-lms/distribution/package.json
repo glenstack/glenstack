@@ -5,7 +5,9 @@
   "scripts": {
     "deploy": "wrangler publish"
   },
-  "dependencies": {},
+  "dependencies": {
+    "qr-image": "3.2.0"
+  },
   "devDependencies": {
     "@cloudflare/wrangler": "1.10.3"
   }
