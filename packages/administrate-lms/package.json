@@ -13,12 +13,14 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.0.tar.gz",
-    "react-native-web": "0.13.0"
+    "react-native-web": "0.13.0",
+    "react-native-webview": "9.4.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.3",
     "@types/react": "16.9.41",
     "@types/react-native": "0.62.14",
+    "expo-cli": "3.21.13",
     "typescript": "3.9.5"
   },
   "private": true
