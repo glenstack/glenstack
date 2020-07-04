@@ -18,3 +18,13 @@
 
 1. `npm install`
 1. `npm start`
+
+## Scripts
+
+- `npm run types:lms`
+
+  Watches your GraphQL queries and generates types which you can pull in when `useQuery<T>(query)`-ing.
+
+- `npm run voyager`
+
+  Spins up GraphQL Voyager.
