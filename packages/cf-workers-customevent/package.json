@@ -1,0 +1,35 @@
+{
+  "name": "@glenstack/cf-workers-customevent",
+  "private": false,
+  "description": "A polyfill CustomEvent implementation for Cloudflare Workers",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test:ci": "jest --ci",
+    "build": "tsc -p tsconfig.build.json --outDir dist/",
+    "clean": "rimraf dist/",
+    "clean:node": "rimraf package-lock.json node_modules/",
+    "lint": "prettier -c .",
+    "format": "npm run lint -- --write"
+  },
+  "author": {
+    "name": "Greg Brimble",
+    "email": "greg@glenstack.com",
+    "url": "https://glenstack.com/"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.4",
+    "@types/node": "14.0.19",
+    "jest": "26.1.0",
+    "prettier": "2.0.5",
+    "rimraf": "3.0.2",
+    "ts-jest": "26.1.1",
+    "typescript": "3.9.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
