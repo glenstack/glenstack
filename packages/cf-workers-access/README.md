@@ -1,6 +1,6 @@
 # Cloudflare Workers Access
 
-Authenticate with [Cloudflare Access](https://teams.cloudflare.com/access/) from within a [Cloudflare Workers](https://workers.cloudflare.com/).
+Authenticate with [Cloudflare Access](https://teams.cloudflare.com/access/) from within a [Cloudflare Worker](https://workers.cloudflare.com/).
 
 ## Installation
 
@@ -17,12 +17,18 @@ const AUTHENTICATION_DOMAIN = "glenstack.cloudflareaccess.com";
 const POLICY_AUD =
   "f8612530c08484786e83e00ff7b549bc3763747beae55ec909cc28a6a56b81d1";
 
-const handler = async (event) => {
+const handleEvent = async (event) => {
   const authenticator = await createAuthenticator(AUTHENTICATION_DOMAIN, {
     aud: POLICY_AUD,
   });
 
-  return new Response("Hello, world!");
+  const jwt = await authenticator(event.request);
+
+  if (jwt) {
+    return new Response(`Hello, ${jwt.email}!`);
+  }
+
+  return new Response("Unauthorized", { status: 401 });
 };
 
 addEventListener("fetch", (event) => {
