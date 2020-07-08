@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-access",
   "private": false,
   "description": "Authenticate with Cloudflare Access from within a Cloudflare Worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "files": [
     "dist/"
