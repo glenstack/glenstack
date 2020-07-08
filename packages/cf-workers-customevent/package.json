@@ -2,7 +2,8 @@
   "name": "@glenstack/cf-workers-customevent",
   "private": false,
   "description": "A polyfill CustomEvent implementation for Cloudflare Workers",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -19,6 +20,15 @@
     "name": "Greg Brimble",
     "email": "greg@glenstack.com",
     "url": "https://glenstack.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/glenstack/glenstack/tree/master/packages/cf-workers-customevent",
+    "email": "hello@glenstack.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glenstack/glenstack",
+    "directory": "packages/cf-workers-customevent"
   },
   "devDependencies": {
     "@types/jest": "26.0.4",

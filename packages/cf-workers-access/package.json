@@ -2,7 +2,8 @@
   "name": "@glenstack/cf-workers-access",
   "private": false,
   "description": "Authenticate with Cloudflare Access from within a Cloudflare Worker",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -19,6 +20,15 @@
     "name": "Greg Brimble",
     "email": "greg@glenstack.com",
     "url": "https://glenstack.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/glenstack/glenstack/tree/master/packages/cf-workers-access",
+    "email": "hello@glenstack.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glenstack/glenstack",
+    "directory": "packages/cf-workers-access"
   },
   "devDependencies": {
     "@types/cookie": "0.4.0",
