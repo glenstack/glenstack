@@ -17,12 +17,12 @@ const AUTHENTICATION_DOMAIN = "glenstack.cloudflareaccess.com";
 const POLICY_AUD =
   "f8612530c08484786e83e00ff7b549bc3763747beae55ec909cc28a6a56b81d1";
 
-const handleEvent = async (event) => {
+const handleRequest = async (request: Request) => {
   const authenticator = await createAuthenticator(AUTHENTICATION_DOMAIN, {
     aud: POLICY_AUD,
   });
 
-  const jwt = await authenticator(event.request);
+  const jwt = await authenticator(request);
 
   if (jwt) {
     return new Response(`Hello, ${jwt.email}!`);
@@ -32,7 +32,7 @@ const handleEvent = async (event) => {
 };
 
 addEventListener("fetch", (event) => {
-  event.respondWith(handleEvent(event));
+  event.respondWith(handleRequest(event.request));
 });
 ```
 
