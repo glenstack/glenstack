@@ -1,0 +1,19 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./output.css",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "@tailwindcss/ui": "0.3.0",
+    "tailwindcss": "1.4.6"
+  },
+  "devDependencies": {
+    "css-to-react-native": "3.0.0",
+    "postcss": "7.0.32",
+    "postcss-js": "2.0.3"
+  }
+}
