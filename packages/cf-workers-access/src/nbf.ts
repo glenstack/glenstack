@@ -4,7 +4,7 @@ import { Handler } from "./index";
 
 export const createNbfVerifier = (tolerance: number = 0): Handler => {
   const nbfOkay = (nbf: number) =>
-    new Date().getTime() / 1000 - nbf >= tolerance;
+    new Date().getTime() / 1000 - nbf >= -tolerance;
 
   return {
     complete: (jws: JWS.VerificationResult) =>

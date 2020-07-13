@@ -4,7 +4,7 @@ import { Handler } from "./index";
 
 export const createExpVerifier = (tolerance: number = 0): Handler => {
   const expOkay = (exp: number) =>
-    exp - new Date().getTime() / 1000 <= tolerance;
+    exp - new Date().getTime() / 1000 > -tolerance;
 
   return {
     complete: (jws: JWS.VerificationResult) =>

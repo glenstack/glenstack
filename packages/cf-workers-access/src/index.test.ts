@@ -43,9 +43,9 @@ const CERTS = {
     },
   ],
 };
-const VALID_DATE = 1594197798;
-const TOO_EARLY_DATE = 1594197794;
-const EXPIRED_DATE = 1594197794;
+const VALID_DATE = 1594197793;
+const TOO_EARLY_DATE = 1594197784;
+const EXPIRED_DATE = 1594197802;
 
 const REQUEST_WITHOUT_COOKIE = new Request("/");
 const REQUEST_WITH_INVALID_COOKIE = new Request("/", {
