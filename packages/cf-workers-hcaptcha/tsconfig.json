@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES6",
+    "declaration": true
+  },
+  "exclude": ["node_modules/**", "dist"]
+}
