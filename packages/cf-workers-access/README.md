@@ -45,7 +45,7 @@ addEventListener("fetch", (event) => {
    - `iss`: Automatically set to the "Login Page Domain", but optionally overridable.
    - `tolerance`: Number of seconds of leeway for validating `exp` and `nbf` claims. Defaults to `0`.
 
-It returns a Promise of a function which, in turn, takes a request and returns a Promise of either:
+It returns a Promise of a function which, in turn, takes a Request and returns a Promise of either:
 
-- `false` (in the event that the request is failed authentication), or
+- `false` if the Request failed authentication, or
 - [the JWT payload](https://developers.cloudflare.com/access/setting-up-access/json-web-token/#payload).
