@@ -1,4 +1,3 @@
-// @ts-ignore
 import FormData from "formdata-node";
 import { createVerifier } from "./index";
 

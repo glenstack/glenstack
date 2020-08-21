@@ -1,10 +1,4 @@
 {
-  "compilerOptions": {
-    "rootDir": "src",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "ES6",
-    "declaration": true
-  },
+  "extends": "./tsconfig.json",
   "exclude": ["node_modules/**", "dist", "**/*.test.*"]
 }

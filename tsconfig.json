@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES6",
+    "declaration": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules/**"]
+}
