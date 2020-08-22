@@ -89,7 +89,7 @@ export const makeGraphQLHandler = (
   } catch (error) {
     return (
       (await makeErrorResponse(request, error)) ||
-      makeResponse({ errors: [{ message: `Internal Server Error` }] })
+      makeResponse({ errors: [{ message: `Internal Error` }] })
     );
   }
 };
