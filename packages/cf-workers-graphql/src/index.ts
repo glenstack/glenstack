@@ -67,7 +67,7 @@ export const makeGraphQLHandler = (
         graphQLRequest = await makeGraphQLRequestFromPost(request);
         break;
       default:
-        return new Response("Method Not Allowed", { status: 405 });
+        return new Response(null, { status: 405 });
     }
     graphQLRequest.contextValue = await makeContextValue(request);
   } catch (error) {
