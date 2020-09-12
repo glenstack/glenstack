@@ -100,3 +100,43 @@ const gitHubFetch = addHeaders(fetch, {
   const response = await gitHubFetch("/meta");
 })();
 ```
+
+### `authorization`
+
+Adds an Authorization header. The following types of authorization are supported:
+
+- Basic
+- Bearer
+
+#### Options Signature
+
+```typescript
+type options =
+  | {
+      username?: string;
+      password?: string;
+    }
+  | {
+      bearere: string;
+    };
+```
+
+#### Options
+
+| Option     | Notes                                        |
+| ---------- | -------------------------------------------- |
+| `username` | Used in basic authorization.                 |
+| `password` | Used in basic authorization.                 |
+| `bearer`   | A bearer token used in bearer authorization. |
+
+#### Example Usage
+
+```typescript
+import { authorization } from "@glenstack/cf-workers-fetch-helpers";
+
+const gitHubFetch = authorization(fetch, { bearer: "aToken" });
+
+(async () => {
+  const response = await gitHubFetch("/meta");
+})();
+```
