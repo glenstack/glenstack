@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-customevent",
   "private": false,
   "description": "A polyfill CustomEvent implementation for Cloudflare Workers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [

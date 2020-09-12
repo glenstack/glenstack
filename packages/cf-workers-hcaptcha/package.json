@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-hcaptcha",
   "private": false,
   "description": "Verify a hCaptcha token from within a Cloudflare Worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
