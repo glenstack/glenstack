@@ -2,6 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "module": "commonjs",
     "target": "ES6",
     "declaration": true,
     "moduleResolution": "node"
