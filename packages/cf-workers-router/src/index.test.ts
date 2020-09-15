@@ -1,4 +1,4 @@
-import { Router } from ".";
+import { Router, Header, Path } from ".";
 
 const getBody = async (response: Promise<Response> | Response) =>
   await (await response).text();
@@ -8,7 +8,7 @@ describe("Router", () => {
   router.get("/hello", () => new Response("world!"));
   router.post(/\/hi/, () => new Response("POST received!"));
   router.handle(
-    (request) => request.headers.has("x-secret"),
+    [Header("x-secret", "sneaky"), Path("/secrets")],
     () => new Response("TOP SECRET!")
   );
 
@@ -31,7 +31,7 @@ describe("Router", () => {
     expect(
       await getBody(
         router.route(
-          new Request("https://example.com/", {
+          new Request("https://example.com/secrets", {
             headers: { "x-secret": "sneaky" },
           })
         )
