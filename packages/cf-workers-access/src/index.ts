@@ -2,7 +2,6 @@ import { parse } from "cookie";
 import { JWK, JWS } from "node-jose";
 import { createAudVerifier } from "./aud";
 import { createExpVerifier } from "./exp";
-import { createNbfVerifier } from "./nbf";
 import { decodeJWSPayload } from "./decodeJWSPayload";
 import { createIssVerifier } from "./iss";
 
@@ -34,7 +33,6 @@ type Handlers = {
     aud?: Handler;
     iss?: Handler;
     exp: Handler;
-    nbf: Handler;
   };
 };
 
@@ -60,14 +58,12 @@ const createHandlers = (opts: VerifierOpts): Handlers => {
   const aud = createAudVerifier(opts.aud);
   const iss = createIssVerifier(opts.iss);
   const exp = createExpVerifier(opts.tolerance);
-  const nbf = createNbfVerifier(opts.tolerance);
 
   return {
     handlers: {
       aud,
       iss,
       exp,
-      nbf,
     },
   };
 };

@@ -85,7 +85,7 @@ describe("createAuthenticator", () => {
     expect(invalidCookieJWT).not.toBeTruthy();
   });
 
-  it("rejects exp/nbf invalid cookies", async () => {
+  it("rejects exp invalid cookies", async () => {
     const simpleAuthenticator = await createAuthenticator(authenticationDomain);
     expect(mockFetch).toBeCalledWith(
       "https://glenstack.cloudflareaccess.com/cdn-cgi/access/certs"
@@ -96,13 +96,7 @@ describe("createAuthenticator", () => {
       REQUEST_WITH_EXPIRED_JWT
     );
 
-    set(TOO_EARLY_DATE * 1000);
-    const tooEarlyCookieJWT = await simpleAuthenticator(
-      REQUEST_WITH_EXPIRED_JWT
-    );
-
     expect(expiredCookieJWT).not.toBeTruthy();
-    expect(tooEarlyCookieJWT).not.toBeTruthy();
   });
 
   it("accepts valid cookies", async () => {
