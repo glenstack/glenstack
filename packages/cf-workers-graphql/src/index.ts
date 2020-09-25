@@ -29,6 +29,10 @@ const makeGraphQLRequestFromGet = async (
 const makeGraphQLRequestFromPost = async (
   request: Request
 ): Promise<GraphQLRequest> => {
+  if (/application\/graphql/i.test(request.headers.get("Content-Type"))) {
+    return { source: await request.text() };
+  }
+
   const { query, variables, operationName } = await request.json();
 
   return {

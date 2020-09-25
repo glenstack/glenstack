@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-graphql",
   "private": false,
   "description": "A lightweight GraphQL Server for Cloudflare Workers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [

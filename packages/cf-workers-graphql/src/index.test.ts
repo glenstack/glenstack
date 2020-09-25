@@ -40,5 +40,17 @@ describe("makeGraphQLHandler", () => {
     const postResponse = await handler(postRequest);
     const postData = await postResponse.json();
     expect(postData).toEqual({ data: { hello: "Hello, John Smith!" } });
+
+    const postGraphQLRequest = new Request("http://fakehost/graphql", {
+      method: "POST",
+      body: "{ hello }",
+      headers: {
+        "Content-Type": "application/graphql",
+        "X-Name": "Jane Smith",
+      },
+    });
+    const postGraphQLResponse = await handler(postGraphQLRequest);
+    const postGraphQLData = await postGraphQLResponse.json();
+    expect(postGraphQLData).toEqual({ data: { hello: "Hello, Jane Smith!" } });
   });
 });
