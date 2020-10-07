@@ -1,0 +1,52 @@
+{
+  "name": "@glenstack/cf-workers-git-gateway",
+  "private": false,
+  "description": "Perform git actions from within a Cloudflare Worker",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test:ci": "jest --ci",
+    "build": "tsc -p tsconfig.build.json --outDir dist/",
+    "clean": "rimraf dist/",
+    "clean:node": "rimraf package-lock.json node_modules/",
+    "lint": "prettier -c .",
+    "format": "npm run lint -- --write"
+  },
+  "author": {
+    "name": "Greg Brimble",
+    "email": "greg@glenstack.com",
+    "url": "https://glenstack.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/glenstack/glenstack/tree/master/packages/cf-workers-git-gateway",
+    "email": "hello@glenstack.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glenstack/glenstack",
+    "directory": "packages/cf-workers-git-gateway"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "2.0.0",
+    "@glenstack/cf-workers-router": "*",
+    "@types/jest": "26.0.10",
+    "@types/node": "14.6.0",
+    "cross-fetch": "3.0.5",
+    "jest": "26.4.1",
+    "prettier": "2.0.5",
+    "rimraf": "3.0.2",
+    "ts-jest": "26.2.0",
+    "typescript": "4.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@glenstack/cf-workers-access": "*",
+    "@glenstack/cf-workers-fetch-helpers": "*"
+  }
+}
