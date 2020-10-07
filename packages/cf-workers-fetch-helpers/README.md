@@ -140,3 +140,65 @@ const gitHubFetch = authorization(fetch, { bearer: "aToken" });
   const response = await gitHubFetch("/meta");
 })();
 ```
+
+### `oauth2`
+
+**Beta**
+
+A OAuth2 client which automatically refreshes tokens.
+
+#### Options Signature
+
+```typescript
+type options = {
+  tokenRefreshed?: (options: {
+    accessToken?: string;
+    refreshToken: string;
+  }) => Promise<void>;
+  accessToken?: string;
+  authorizationHasExpired?: (response: Response) => Promise<boolean>;
+  refreshToken: string;
+  tokenEndpoint: string;
+  clientID: string;
+  clientSecret: string;
+  redirectURI?: string;
+  scope?: string;
+  refreshFetch?: typeof fetch;
+};
+```
+
+#### Options
+
+| Option                    | Notes                                                                                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tokenRefreshed`          | A function called when a new token is generated. Useful if you wish to persist the latest valid tokens.                                      |
+| `accessToken`             | An Access Token.                                                                                                                             |
+| `authorizationHasExpired` | A function to evaluate if, given a Response, the Access Token is now invalid. Defaults to returning true if the Response status code is 401. |
+| `refreshToken`            | A valid Refresh Token.                                                                                                                       |
+| `tokenEndpoint`           | The URL of the authorization server which refreshes tokens.                                                                                  |
+| `clientID`                | The application client ID.                                                                                                                   |
+| `clientSecret`            | The application client secret.                                                                                                               |
+| `redirectURI`             | Although not in the specification, some authorization servers require a valid redirect URI when refreshing tokens.                           |
+| `scope`                   | The scope of the access token.                                                                                                               |
+| `refreshFetch`            | The fetch function to use when making calls to the authorization server. Defaults to the global fetch function.                              |
+
+#### Example Usage
+
+```typescript
+import { oauth2 } from "@glenstack/cf-workers-fetch-helpers";
+
+const gitHubFetch = oauth2(fetch, {
+  tokenRefreshed: async ({ accessToken, refreshToken }) => {
+    console.log("Tokens have been refreshed!", { accessToken, refreshToken });
+  },
+  accessToken: "anAccessToken",
+  refreshToken: "aRefreshToken",
+  tokenEndpoint: "https://github.com/login/oauth/access_token",
+  clientID: "anID",
+  clientSecret: "aSecret",
+});
+
+(async () => {
+  const response = await gitHubFetch("/meta");
+})();
+```
