@@ -34,19 +34,24 @@ const getNewToken = async ({
     ...(redirectURI === undefined ? {} : { redirect_uri: redirectURI }),
   });
 
-  const response = await refreshFetch(tokenEndpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: body.toString(),
-  });
+  try {
+    const response = await refreshFetch(tokenEndpoint, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: body.toString(),
+    });
+    const data = await response.json();
 
-  const data = await response.json();
-  return {
-    accessToken: data.access_token,
-    refreshToken: data.refresh_token,
-  };
+    return {
+      accessToken: data.access_token,
+      refreshToken: data.refresh_token,
+    };
+  } catch (error) {
+    throw new Error("Could not refresh token. It might have expired.");
+  }
 };
 
 const authorizationHasExpired = async (response: Response) => {

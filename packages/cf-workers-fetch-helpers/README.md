@@ -143,8 +143,6 @@ const gitHubFetch = authorization(fetch, { bearer: "aToken" });
 
 ### `oauth2`
 
-**Beta**
-
 A OAuth2 client which automatically refreshes tokens.
 
 #### Options Signature
@@ -199,6 +197,6 @@ const gitHubFetch = oauth2(fetch, {
 });
 
 (async () => {
-  const response = await gitHubFetch("/meta");
+  const response = await gitHubFetch("https://api.github.com/meta");
 })();
 ```
