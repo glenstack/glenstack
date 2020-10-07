@@ -1,5 +1,14 @@
 import { authorization } from "./authorization";
 
+export class FailedToRefreshOAuth2TokenError extends Error {
+  constructor() {
+    super();
+    this.name = "FailedToRefreshError";
+    this.message =
+      "Could not generate a new OAuth Access Token. The Refresh Token has likely expired.";
+  }
+}
+
 type OAuth2Options = {
   accessToken?: string;
   tokenRefreshed?: typeof tokenRefreshed;
@@ -44,13 +53,18 @@ const getNewToken = async ({
       body: body.toString(),
     });
     const data = await response.json();
+    if (
+      !response.ok ||
+      (!("access_token" in data) && !("refresh_token" in data))
+    )
+      throw new Error("Invalid refresh response");
 
     return {
       accessToken: data.access_token,
       refreshToken: data.refresh_token,
     };
   } catch (error) {
-    throw new Error("Could not refresh token. It might have expired.");
+    throw new FailedToRefreshOAuth2TokenError();
   }
 };
 
