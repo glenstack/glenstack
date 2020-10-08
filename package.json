@@ -32,6 +32,7 @@
     "lint": "lerna run lint",
     "format": "lerna run format",
     "lint:fix": "npm run lint || (npm run format && npm run lint)",
+    "pretest": "npm run build",
     "test": "lerna run test:ci",
     "build": "lerna run build",
     "clean": "lerna run clean"
