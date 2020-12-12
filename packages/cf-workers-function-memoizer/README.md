@@ -5,13 +5,13 @@ A wrapper which utilizes [Cloudflare Workers KV](https://developers.cloudflare.c
 ## Installation
 
 ```sh
-npm install --save @glenstack/cf-workers-kv-function-memoizer
+npm install --save @glenstack/cf-workers-function-memoizer
 ```
 
 ## Usage
 
 ```typescript
-import { makeMemoizer } from "@glenstack/cf-workers-customevent";
+import { makeMemoizer } from "@glenstack/cf-workers-function-memoizer";
 
 const memoize = makeMemoizer(CACHE_KV_NAMESPACE);
 

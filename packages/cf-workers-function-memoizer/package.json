@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-function-memoizer",
   "private": false,
   "description": "A wrapper which utilizes Cloudflare Workers KV to memoize a function",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
