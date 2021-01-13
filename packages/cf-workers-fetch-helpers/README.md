@@ -69,6 +69,36 @@ const gitHubFetch = alterURL(fetch, { prepend: "https://api.github.com" });
 })();
 ```
 
+### `proxyHost`
+
+Replaces the host of a Request URL.
+
+#### Options Signature
+
+```typescript
+type options = {
+  host: string;
+};
+```
+
+#### Options
+
+| Option | Notes                                       |
+| ------ | ------------------------------------------- |
+| `host` | The new host to replace in the Request URL. |
+
+#### Example Usage
+
+```typescript
+import { proxyHost } from "@glenstack/cf-workers-fetch-helpers";
+
+const proxiedFetch = proxyHost(fetch, { host: "about.gitlab.com" })(
+  async () => {
+    const response = await proxiedFetch("https://github.com/pricing");
+  }
+)();
+```
+
 ### `addHeaders`
 
 Adds headers to the Request.

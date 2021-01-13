@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-fetch-helpers",
   "private": false,
   "description": "A collection of chainable helpers to adapt the Fetch API",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
