@@ -208,7 +208,7 @@ import {
 } from "algoliasearch";
 import { createFetchHttpRequester } from "./createFetchHttpRequester";
 
-const VERSION = "1.0.0";
+const VERSION = "1.0.2";
 
 export default function algoliasearch(
   appId: string,

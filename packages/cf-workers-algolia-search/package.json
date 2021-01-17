@@ -2,7 +2,7 @@
   "name": "@glenstack/cf-workers-algolia-search",
   "private": false,
   "description": "An Algolia search client for Cloudflare Workers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
