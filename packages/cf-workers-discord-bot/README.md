@@ -1,6 +1,6 @@
 # Cloudflare Workers Discord Bot
 
-Respond to [Discord Slash Commands](https://discord.com/developers/docs/interactions/slash-commands) from within [Cloudflare Workers](https://workers.cloudflare.com/).
+Interact with [Discord](https://discord.com/) from within [Cloudflare Workers](https://workers.cloudflare.com/).
 
 ## Installation
 
@@ -10,9 +10,11 @@ npm install --save @glenstack/cf-workers-discord-bot
 
 ## Usage
 
+### `createSlashCommandHandler`
+
 ```typescript
 import {
-  createDiscordHandler,
+  createSlashCommandHandler,
   ApplicationCommand,
   InteractionHandler,
   Interaction,
@@ -41,7 +43,7 @@ const helloHandler: InteractionHandler = async (
   };
 };
 
-const discordHandler = createDiscordHandler({
+const slashCommandHandler = createSlashCommandHandler({
   applicationID: "799627301675466772",
   applicationSecret: APPLICATION_SECRET, // You should store this in a secret
   publicKey: "1b780f7f71ac39645d44cc4dce8fa78c860d0157cb0912d755b7a7cb95394532",
@@ -49,11 +51,11 @@ const discordHandler = createDiscordHandler({
 });
 
 addEventListener("fetch", (event) => {
-  event.respondWith(discordHandler(event.request));
+  event.respondWith(slashCommandHandler(event.request));
 });
 ```
 
-`createDiscordHandler` takes one parameter:
+`createSlashCommandHandler` takes one parameter:
 
 1. An object with the following parameters:
 

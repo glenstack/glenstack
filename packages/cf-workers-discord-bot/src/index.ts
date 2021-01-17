@@ -7,7 +7,7 @@ export * from "./types";
 
 const router = new Router();
 
-export const createDiscordHandler = ({
+export const createSlashCommandHandler = ({
   applicationID,
   applicationSecret,
   publicKey,
