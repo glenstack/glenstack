@@ -1,0 +1,59 @@
+{
+  "name": "@glenstack/cf-workers-algolia-search",
+  "private": false,
+  "description": "An Algolia search client for Cloudflare Workers",
+  "version": "1.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test:ci": "jest --ci",
+    "build": "tsc -p tsconfig.build.json --outDir dist/",
+    "clean": "rimraf dist/",
+    "clean:node": "rimraf package-lock.json node_modules/",
+    "lint": "prettier -c .",
+    "format": "npm run lint -- --write"
+  },
+  "author": {
+    "name": "Greg Brimble",
+    "email": "greg@glenstack.com",
+    "url": "https://glenstack.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/glenstack/glenstack/tree/master/packages/cf-workers-algolia-search",
+    "email": "hello@glenstack.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glenstack/glenstack",
+    "directory": "packages/cf-workers-algolia-search"
+  },
+  "devDependencies": {
+    "@algolia/requester-common": "4.8.3",
+    "@types/jest": "26.0.10",
+    "@types/node": "14.6.0",
+    "algoliasearch": "4.8.3",
+    "cross-fetch": "3.0.5",
+    "jest": "26.4.1",
+    "prettier": "2.0.5",
+    "rimraf": "3.0.2",
+    "ts-jest": "26.2.0",
+    "typescript": "4.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@algolia/cache-common": "4.8.3",
+    "@algolia/cache-in-memory": "4.8.3",
+    "@algolia/client-analytics": "4.8.3",
+    "@algolia/client-common": "4.8.3",
+    "@algolia/client-recommendation": "4.8.3",
+    "@algolia/client-search": "4.8.3",
+    "@algolia/logger-common": "4.8.3",
+    "@algolia/logger-console": "4.8.3",
+    "@algolia/transporter": "4.8.3"
+  }
+}
