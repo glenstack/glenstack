@@ -35,15 +35,16 @@ type Payload = {
 
 export const createVerifier = (secret: string) => async (
   request: Request,
-  { tokenExtractor } = { tokenExtractor: extractTokenFromRequest }
+  { tokenExtractor, sitekey } = { tokenExtractor: extractTokenFromRequest, sitekey: undefined }
 ): Promise<Payload> => {
   const remoteip = await extractIPFromRequest(request);
   const token = await tokenExtractor(request);
-
+  const body = new URLSearchParams({ secret, response: token, remoteip });
+  if (sitekey) body.set('sitekey', sitekey);
   const response = await fetch(VERIFY_URL, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ secret, response: token, remoteip }),
+    body,
   });
 
   try {
