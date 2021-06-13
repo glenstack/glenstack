@@ -40,5 +40,6 @@ It returns a function which, in turn, takes two parameters:
 1. Optionally, an object with the optional parameters:
 
    - `tokenExtractor`: An asynchronous function which, when given a Request, returns the token to verify. This defaults to extracting `h-captcha-response` from the `formData` body.
+   - `sitekey`: The sitekey you expect to see.
 
 It returns a Promise of the [the hCaptcha payload](https://docs.hcaptcha.com/#server) if the verification was successful, else throws an error with [a human-readable error message](https://docs.hcaptcha.com/#server).
